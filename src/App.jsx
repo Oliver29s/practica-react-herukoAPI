@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import "./App.css";
 import CardRick from "./components/CardRick";
@@ -9,9 +8,10 @@ function App() {
   const [allElemts, setallElemt] = useState("");
   const [event, setEvent] = useState(useNumberRandom());
   useEffect(() => {
-    axios
-      .get(`https://rickandmortyapi.com/api/location/${event}`)
-      .then((res) => setallElemt(res.data))
+    
+      fetch(`https://rickandmortyapi.com/api/location/${event}`)
+      .then( res => res.json())
+      .then((data) => setallElemt(data))
       .catch((err) => console.log(err));
   }, [event]);
 
