@@ -1,17 +1,16 @@
-import React from 'react'
+import React from "react";
 
-const Form = () => {
-    const handleSubmit = evnt => (
-        evnt.preventDefault()
-       
-      )
-    
+const Form = ({ setEvent }) => {
+  const handleSubmit = (evnt) => (
+    evnt.preventDefault(), setEvent(evnt.target.valueInput.value)
+  );
+
   return (
     <form onSubmit={handleSubmit}>
-        <input id='value' type="text" />
-        <button>Search</button>
+      <input id="valueInput" type="text" />
+      <button>Search</button>
     </form>
-  )
-}
+  );
+};
 
-export default Form
+export default Form;
