@@ -10,7 +10,17 @@ const CardRick = ({ url }) => {
   }, []);
   console.log(urlRick)
   return (
-  <div>CardRick</div>
+  <div>
+   <div>
+    <img src={urlRick?.image} alt={urlRick?.name} />
+    <p>{urlRick?.status}</p>
+   </div>
+   <ul>
+    <li>{urlRick?.name}</li>
+    <li>{urlRick?.origin.name}</li>
+    <li>{urlRick?.episode.length}</li>
+   </ul>
+  </div>
   );
 };
 

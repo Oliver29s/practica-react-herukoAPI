@@ -3,10 +3,11 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import CardRick from "./components/CardRick";
 import LocationRick from "./components/LocationRick";
+import useNumberRandom from "./utili/useNumberRandom";
 
 function App() {
   const [allElemts, setallElemt] = useState("");
-  const [event, setEvent] = useState(7);
+  const [event, setEvent] = useState(useNumberRandom());
   useEffect(() => {
     axios
       .get(`https://rickandmortyapi.com/api/location/${event}`)
@@ -22,7 +23,7 @@ function App() {
       <LocationRick allElemts={allElemts} setEvent={setEvent} />
       {
         allElemts?.residents?.map( url =>(
-          <CardRick  url={url} />
+          <CardRick key={url} url={url} />
         ))
       }
       
