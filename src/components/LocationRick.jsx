@@ -4,13 +4,28 @@ import Form from "./Form";
 const LocationRick = ({ allElemts, setEvent }) => {
   return (
     <>
-      <Form setEvent={setEvent} />
-      <section>
+     
+      <section className="section__location">
         <h2>Name: {allElemts?.name}</h2>
-        <p>Type: {allElemts?.type}</p>
-        <p>Dimenssion: {allElemts?.dimension}</p>
-        <p>Residents: {allElemts?.residents?.length}</p>
+        <div className="section__info">
+        <div className="bxs-rule">
+          <i class='bx bxs-universal-access'></i>
+            <p>Type: {allElemts?.type}</p>
+          </div>
+          <div className="bxs-rule"> 
+          <i class='bx bxs-ruler'></i>
+            <p>Dimenssion: {allElemts?.dimension}</p>
+          </div>
+          <div className="bxs-rule">
+          <i class='bx bxs-home-alt-2'></i>
+            <p>Residents: {allElemts?.residents?.length}</p>
+          </div>
+        </div>
+      
+       
+        
       </section>
+      <Form setEvent={setEvent} />
     </>
   );
 };

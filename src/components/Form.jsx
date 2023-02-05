@@ -6,9 +6,9 @@ const Form = ({ setEvent }) => {
   );
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="contain__form" onSubmit={handleSubmit}>
       <input id="valueInput" type="text" />
-      <button>Search</button>
+      <button className="button__form"> Search</button>
     </form>
   );
 };

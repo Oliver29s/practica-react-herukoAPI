@@ -1,0 +1,77 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contain__header {
+  width: 100%;
+  height: 25vh;
+  background-image: url(https://poptv.orange.es/wp-content/uploads/sites/3/2018/03/Rick-and-Morty-3p-1100x619.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 25px;
+  color: rgb(227, 112, 70);
+  opacity: 80%;
+  position: relative;
+}
+
+.contain__form > input,
+button {
+  border: none;
+  border-radius: 1rem;
+  margin-left: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transition: 0.5s;
+}
+
+.contain__form > button:hover {
+  transform: scale(1.2);
+  font-weight: bold;
+}
+
+.button__form {
+  background-color: rgb(227, 112, 70);
+}
+
+.section__location {
+  background-color: aquamarine;
+  width: 70%;
+  padding: 1rem 0.3rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  color:rgb(227, 112, 70) ;
+  max-width: 650px;
+}
+
+.section__info{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align: center;
+    gap: 0.3rem;
+    
+}
+
+.bxs-rule{
+    background-color:  rgb(19, 67, 19);
+    align-self: center;
+    padding: 1rem 0;
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    transition: 0.5s;
+}
+.bxs-rule:hover{
+    transform: scale(1.1);
+}
+    
+  
