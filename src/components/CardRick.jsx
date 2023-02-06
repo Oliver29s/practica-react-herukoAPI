@@ -10,10 +10,14 @@ const CardRick = ({ url }) => {
   }, []);
   console.log(urlRick)
   return (
-  <div>
-   <div>
+  <div className="cards__component">
+   <div className="contain__img">
     <img src={urlRick?.image} alt={urlRick?.name} />
+    <div className="status">
+    
+    <i className={`bx bxs-polygon ${urlRick?.status}`}></i>
     <p>{urlRick?.status}</p>
+    </div>
    </div>
    <ul>
     <li>{urlRick?.name}</li>

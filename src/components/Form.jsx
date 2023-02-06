@@ -7,7 +7,7 @@ const Form = ({ setEvent }) => {
 
   return (
     <form className="contain__form" onSubmit={handleSubmit}>
-      <input id="valueInput" type="text" />
+      <input id="valueInput" type="text" placeholder="Only numbers from 1 to 126" />
       <button className="button__form"> Search</button>
     </form>
   );

@@ -17,8 +17,19 @@
   font-weight: bold;
   font-size: 25px;
   color: rgb(227, 112, 70);
-  opacity: 80%;
+  opacity: 65%;
   position: relative;
+}
+.contain__header > h1{
+  opacity: 100%;
+  background-color:rgb(19, 67, 19) ;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  transition: 0.5s;
+}
+
+.contain__header > h1:hover{
+  transform: scale(0.7);
 }
 
 .contain__form > input,
@@ -74,4 +85,36 @@ button {
     transform: scale(1.1);
 }
     
+.contain__cards{
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cards__component{
+  position: relative;
+}
+.status{
+  position: absolute;
+  top: 15px;
+  padding: 0 5px;
+  background-color: antiquewhite;
+  display: flex;
+  gap: 0.5rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  
+}
+
+.Dead{
+  color: orange;
+}
+
+.Alive{
+  color: green;
+}
+
+
   
