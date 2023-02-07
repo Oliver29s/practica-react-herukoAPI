@@ -29,7 +29,7 @@
 }
 
 .contain__header > h1:hover{
-  transform: scale(0.7);
+  transform: scale(0.8);
 }
 
 .contain__form > input,
@@ -96,7 +96,22 @@ button {
 
 .cards__component{
   position: relative;
+  max-width: 350px;
+  border-radius: 1rem;
+  overflow: hidden;
 }
+
+.cards__component > ul{
+  list-style: none;
+  background-color: aquamarine;
+  padding: 0 0.3rem ;
+  
+}
+
+.info__cards{
+  font-weight: bold;
+}
+
 .status{
   position: absolute;
   top: 15px;

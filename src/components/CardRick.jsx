@@ -20,9 +20,9 @@ const CardRick = ({ url }) => {
     </div>
    </div>
    <ul>
-    <li>{urlRick?.name}</li>
-    <li>{urlRick?.origin.name}</li>
-    <li>{urlRick?.episode.length}</li>
+    <li><span className="info__cards">Name: </span> {urlRick?.name}</li>
+    <li> <span className="info__cards">Type: </span>{urlRick?.origin.name}</li>
+    <li> <span className="info__cards">Episodes:</span> {urlRick?.episode.length}</li>
    </ul>
   </div>
   );
