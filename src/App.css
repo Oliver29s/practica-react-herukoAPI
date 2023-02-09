@@ -95,15 +95,19 @@ button {
 
 .cards__component{
   position: relative;
-  max-width: 350px;
+  max-width: 300px;
   border-radius: 1rem;
   overflow: hidden;
+  transition: 0.5s;
+}
+.cards__component:hover{
+  transform: scale(0.9);
 }
 
 .cards__component > ul{
   list-style: none;
   background-color: aquamarine;
-  padding: 0 0.3rem ;
+  padding:  0.3rem ;
   
 }
 

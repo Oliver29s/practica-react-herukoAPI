@@ -5,9 +5,9 @@ import CaatchError from "./components/CaatchError";
 import CardRick from "./components/CardRick";
 import Form from "./components/Form";
 import LocationRick from "./components/LocationRick";
-import useNumberRandom from "./utili/useNumberRandom";
+import useNumberRandom from "./Layout/useNumberRandom";
 
-function App() {
+function App({API}) {
   const [allElemts, setallElemt] = useState("");
   const [event, setEvent] = useState(useNumberRandom());
   const [error, setError] = useState(true);
@@ -17,14 +17,14 @@ function App() {
       .then((res) => {setallElemt(res.data),setError(true)})
       .catch((err) => {console.log(err),
         setError(false) });
-  }, [event]);
+  }, [event,API]);
 
   return (
     <div className="App">
       <header className="contain__header">
         <h1>Rick and Morty</h1>
       </header>
-      <Form setEvent={setEvent} />
+      <Form setEvent={setEvent} event={event} />
 
       {error ? (
         <>
