@@ -21,7 +21,7 @@
 }
 .contain__header > h1{
   opacity: 100%;
-  background-color:rgb(19, 67, 19) ;
+  background-color:rgba(19, 67, 19, 0.459) ;
   padding: 0.5rem;
   border-radius: 1rem;
   transition: 0.5s;
@@ -50,7 +50,7 @@ button {
 }
 
 .section__location {
-  background-color: aquamarine;
+  background-color: rgba(127, 255, 212, 0.221);
   width: 70%;
   padding: 1rem 0.3rem;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
@@ -73,7 +73,7 @@ button {
 }
 
 .bxs-rule{
-    background-color:  rgb(19, 67, 19);
+    background-color:  rgba(19, 67, 19, 0.348);
     align-self: center;
     padding: 1rem 0;
     border-radius: 1rem;
@@ -106,7 +106,7 @@ button {
 
 .cards__component > ul{
   list-style: none;
-  background-color: aquamarine;
+  background-color: rgba(127, 255, 212, 0.394);
   padding:  0.3rem ;
   
 }

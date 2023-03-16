@@ -12,7 +12,15 @@ const Form = ({ setEvent, event }) => {
       .then((res) => res.data)
       .catch((err) => console.log(err));
   }, [API, event]);
-  const handleOnChange = (e) => setAPI(e.target.value);
+  const handleOnChange = (e) => {
+    if(API = ' ' ){
+      axios
+      .get(`https://rickandmortyapi.com/api/location/${event}`)
+      .then((res) => {setallElemt(res.data),setError(true)})
+      .catch((err) => console.log(err));
+    }
+    setAPI(e.target.value)
+  };
   console.log(API)
   return (
     <form className="contain__form" onSubmit={handleSubmit}>
