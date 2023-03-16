@@ -2,9 +2,15 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 const Form = ({ setEvent, event }) => {
-  const handleSubmit = (evnt) => (
+  const handleSubmit = (evnt) => {
     evnt.preventDefault(), setEvent(evnt.target.valueInput.value)
-  );
+    if(evnt = ' ' ){
+      axios
+      .get(`https://rickandmortyapi.com/api/location/${event}`)
+      .then((res) => {setallElemt(res.data),setError(true)})
+      .catch((err) => console.log(err));
+    }
+  };
   const [API, setAPI] = useState();
   useEffect(() => {
     axios
@@ -13,12 +19,7 @@ const Form = ({ setEvent, event }) => {
       .catch((err) => console.log(err));
   }, [API, event]);
   const handleOnChange = (e) => {
-    if(API = ' ' ){
-      axios
-      .get(`https://rickandmortyapi.com/api/location/${event}`)
-      .then((res) => {setallElemt(res.data),setError(true)})
-      .catch((err) => console.log(err));
-    }
+    
     setAPI(e.target.value)
   };
   console.log(API)
